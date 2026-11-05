@@ -16,3 +16,71 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+
+---
+
+### 📄 `.gitignore`
+
+```gitignore
+# ═══════════════════════════════════════════════════════════════════
+# NEXUS SENTINEL — .gitignore
+# ═══════════════════════════════════════════════════════════════════
+
+# --- RUST ---
+target/
+**/*.rs.bk
+*.pdb
+Cargo.lock
+
+# --- GO ---
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+
+# --- BINAIRES DE BUILD ---
+scp-server
+agent-firewall
+snapshot-cli
+ai-gateway
+nexus-sentinel
+
+# --- SNAPSHOTS & ARCHIVES ---
+*.bin
+*.snapshot
+state.bin
+
+# --- LOGS & AUDIT ---
+*.log
+audit.log
+logs/
+tmp/
+temp/
+
+# --- OS & EDITORS ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+.vs/
+*.sublime-workspace
+*.sublime-project
+
+# --- SECRETS ---
+.env
+.env.local
+*.pem
+*.key
+*.crt
+secrets.json
+config.json
+
+# --- PROLOG RULES ---
+# Keep rules.pl, ignore generated caches
+*.pl.cache
