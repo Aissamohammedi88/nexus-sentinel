@@ -1,0 +1,15 @@
+[package]
+name = "scp-server"
+version = "0.1.0"
+edition = "2021"
+description = "Sovereign Context Protocol (SCP) server: indexes a project tree and exposes a dependency DAG over a local HTTP API."
+license = "MIT"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
